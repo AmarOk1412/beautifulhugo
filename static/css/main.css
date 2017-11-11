@@ -5,15 +5,23 @@ body {
   font-size: 18px;
   color: #404040;
   position: relative;
-  background: #FFF;
+  background: #073553;
   display: flex;
   flex-flow: column;
   height: 100vh;
 }
-.container[role=main] {
-  margin-bottom:50px;
+.container {
+  padding-bottom: 50px;
   flex: 1 0 auto;
+  background: #f8f8f8;
 }
+header .container {
+  padding-top: 20px;
+}
+.big-img .container {
+  background: rgba(0,0,0,0);
+}
+
 p {
   line-height: 1.5;
   margin: 30px 0;
@@ -31,7 +39,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: #073553;
 }
 blockquote {
   color: #808080;
@@ -69,12 +77,12 @@ hr.small {
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: #073553;
 }
 ::selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: #073553;
 }
 img::selection {
   color: white;
@@ -104,8 +112,7 @@ img {
 /* --- Navbar --- */
 
 .navbar-custom {
-  background: #F5F5F5;
-  border-bottom: 1px solid #EAEAEA;
+  background: #FFFFFF;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -125,7 +132,16 @@ img {
 .navbar-custom .navbar-brand:focus ,
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
-  color: #0085a1;
+  color: #073553;
+}
+
+.navbar-by {
+  float: left;
+  height: 50px;
+  padding: 15px 0;
+  margin-left: -5px;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .navbar-custom .navbar-brand-logo {
@@ -245,7 +261,7 @@ img {
     text-align: center;
   }
   .navbar-custom .nav .navlinks-container:hover {
-    background: #eee;
+    background: #f0f0f0;
   }
   .navbar-custom .nav .navlinks-container:hover .navlinks-children {
     display: block;
@@ -263,9 +279,8 @@ img {
 /* --- Footer --- */
 
 footer {
-  padding: 30px 0;
-  background: #F5F5F5;
-  border-top: 1px #EAEAEA solid;
+  padding: 0px 0;
+  background: #FFFFFF;
   margin-top: auto;
   font-size: 14px;
 }
@@ -288,10 +303,12 @@ footer .theme-by {
   margin: 10px 0 0;
 }
 
+footer .container {
+  padding: 10px 5px;
+  background: #FFFFFF;
+}
+
 @media only screen and (min-width: 768px) {
-  footer {
-    padding: 50px 0;
-  }
   footer .footer-links {
     font-size: 18px;
   }
@@ -325,7 +342,7 @@ footer .theme-by {
 .post-preview a:focus,
 .post-preview a:hover {
   text-decoration: none;
-  color: #0085a1;
+  color: #073553;
 }
 
 .post-preview .post-title {
@@ -333,6 +350,7 @@ footer .theme-by {
   margin-top: 0;
 }
 .post-preview .post-subtitle {
+  color: #e08840;
   margin: 0;
   font-weight: 300;
   margin-bottom: 10px;
@@ -433,7 +451,7 @@ footer .theme-by {
 /* --- Post and page headers --- */
 
 .intro-header {
-  margin: 80px 0 20px;
+  margin: 0;
   position: relative;
 }
 .intro-header.big-img {
@@ -478,6 +496,7 @@ footer .theme-by {
 }
 .intro-header .page-heading .page-subheading,
 .intro-header .post-heading .post-subheading {
+  color: #e08840;
   font-size: 27px;
   line-height: 1.1;
   display: block;
@@ -598,8 +617,8 @@ footer .theme-by {
 .pager li a:hover,
 .pager li a:focus {
   color: #FFF;
-  background: #0085a1;
-  border: 1px solid #0085a1;
+  background: #073553;
+  border: 1px solid #073553;
 }
 
 .pager {
@@ -661,23 +680,7 @@ pre {
 pre code {
   white-space: pre;
 }
-pre.highlight, .highlight > pre, td.code pre {
-  background: #FAFAFA;
-  background-image: linear-gradient(#F9F9F9 50%, #FDFDFD 50%);
-  background-repeat: repeat;
-  background-size: 3em 3em;
-  background-position: 0px 10px;
-  border-left: 7px solid #444;
-}
-code table, code table td, code table th, code table tbody, code table tr,
-td.gutter pre {
-  padding: 0;
-  border: none;
-  background-color: #fff;
-}
-.highlight > pre {
-  padding: 0;
-}
+
 td.code pre {
   border-width: 0 0 0 2px;
   border-style: solid;
