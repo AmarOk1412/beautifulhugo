@@ -18,8 +18,14 @@ body {
 header .container {
   padding-top: 20px;
 }
+
 .big-img .container {
   background: rgba(0,0,0,0);
+  padding: 100px 0px;
+}
+
+.big-img .container h1 {
+  color: white;
 }
 
 p {
@@ -28,12 +34,19 @@ p {
 }
 p a {
   /* text-decoration: underline */
-  color: #008AFF;
+  color: #e08840;
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
 }
+
+.big-img .container h2 {
+  color: #e08840;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
 a {
   color: #008AFF;
 }
